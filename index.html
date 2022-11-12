@@ -5,15 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/two-main.min.css" />
   </head>
   <body>
     <header class="page-header">
       <div class="container">
         <div class="page-header__block">
           <nav class="navigation page-header__navigation">
-            <a href="" class="logo page-header__logo">
-              Web<span class="page-header__logo--white">Studio</span>
+            <a
+              class="logo page-header__logo page-header__logo--black"
+              lang="en"
+              href="./index.html"
+            >
+              Web<span>Studio</span>
             </a>
             <ul class="list page-header__list">
               <li class="list__item">
@@ -30,7 +34,7 @@
           <ul class="contact page-header__contact">
             <li class="contact__item">
               <a class="contact__link" href="mailto:info@devstudio.com">
-                <svg class="contact__icon" width="16" height="12">
+                <svg class="icon contact__icon" width="16" height="12">
                   <use xlink:href="./images/sprite.svg#icon-maile"></use>
                 </svg>
                 info@devstudio.com
@@ -38,7 +42,7 @@
             </li>
             <li class="contact__item">
               <a class="contact__link" href="tel:+380961111111">
-                <svg class="contact-icon" width="10" height="16">
+                <svg class="icon contact__icon" width="10" height="16">
                   <use xlink:href="./images/sprite.svg#icon-phone1"></use>
                 </svg>
                 +38 096 111 11 11
@@ -48,5 +52,189 @@
         </div>
       </div>
     </header>
+    <main>
+      <!-- Герой -->
+      <section class="hero">
+        <div class="container">
+          <h1 class="pretitle hero__pretitle">Ефективні рішення для вашого бізнесу</h1>
+          <button class="button hero__button" type="submit" data-modal-open>
+            Замовити послугу
+          </button>
+        </div>
+      </section>
+      <!--Переваги features-->
+      <section class="features">
+        <div class="container">
+          <h2 class="visually-hidden">Переваги</h2>
+          <ul class="cards features__card">
+            <li class="cards__item">
+              <div class="thumba card__thumba">
+                <svg class="icon thumba__icon" width="70" height="70">
+                  <use xlink:href="./images/sprite.svg#icon-antenna"></use>
+                </svg>
+              </div>
+              <h3 class="label thumba__label">УВАГА ДО ДЕТАЛЕЙ</h3>
+              <p class="description thumba__description">
+                Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
+              </p>
+            </li>
+            <li class="cards__item">
+              <div class="thumba card__thumba">
+                <svg class="icon thumba__icon" width="70" height="70">
+                  <use xlink:href="./images/sprite.svg#icon-clock"></use>
+                </svg>
+              </div>
+              <h3 class="label thumba__label">ПУНКТУАЛЬНІСТЬ</h3>
+              <p class="description thumba__description">
+                Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
+              </p>
+            </li>
+            <li class="cards__item">
+              <div class="thumba card__thumba">
+                <svg class="icon thumba__icon" width="70" height="70">
+                  <use xlink:href="./images/sprite.svg#icon-diagram"></use>
+                </svg>
+              </div>
+              <h3 class="label thumba__label">ПЛАНУВАННЯ</h3>
+              <p class="description thumba__description">
+                Так само консультація з широким активом значною мірою зумовлює.
+              </p>
+            </li>
+            <li class="cards__item">
+              <div class="thumba card__thumba">
+                <svg class="icon thumba__icon" width="70" height="70">
+                  <use xlink:href="./images/sprite.svg#icon-astronaut"></use>
+                </svg>
+              </div>
+              <h3 class="label thumba__label">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+              <p class="description thumba__description">
+                Значимість цих проблем настільки очевидна, що реалізація планових завдань.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--Чим ми займаємося-->
+      <section class="work">
+        <div class="container">
+          <h2 class="title work__title">Чим ми займаємося</h2>
+          <ul class="products work__products">
+            <li class="products__item">
+              <div class="products__content">
+                <img
+                  class="content__image image"
+                  src="./images/doing_1.jpg"
+                  alt="Набирання коду відповідно алгоритму"
+                  width="370"
+                  height="294"
+                />
+                <p class="content-hidden">Десктопні додатки</p>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__content">
+                <img
+                  class="content__image image"
+                  src="./images/doing_2.jpg"
+                  alt="Провірка адаптивної версії на телефоні"
+                  width="370"
+                  height="294"
+                />
+                <p class="content-hidden">Мобільні додатки</p>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__content">
+                <img
+                  class="content__image image"
+                  src="./images/doing_3.jpg"
+                  alt="Вибір основного кольору з кольорової гами"
+                  width="370"
+                  height="294"
+                />
+                <p class="content-hidden">Дизайнерські рішення</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--Наша команда-->
+      <section class="team">
+        <div class="container">
+          <h2 class="title team__title"></h2>
+          <ul class="row team__row">
+            <li class="card-set">
+              <img
+                class="image card-set__image"
+                src="./images/team_1.jpg"
+                alt="Фото Ігора Дем'яненка"
+                width="270"
+                height="260"
+              />
+              <div class="meta card-set__meta">
+                <h3 class="name meta__name">Ігор Дем'яненко</h3>
+                <p class="speciality meta__speciality">Product Designer</p>
+                <ul class="social social__row">
+                  <li class="social__items">
+                    <a
+                      class="social__link"
+                      href="#"
+                      target="_blank"
+                      aria-label="instagram"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="icon social__icon" width="20" height="20">
+                        <use xlink:href="./images/sprite.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__items">
+                    <a
+                      class="social__link"
+                      href="#"
+                      target="_blank"
+                      aria-label="twitter"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="icon social__icon" width="20" height="20">
+                        <use xlink:href="./images/sprite.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__items">
+                    <a
+                      class="social__link"
+                      href="#"
+                      target="_blank"
+                      aria-label="facebook"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="icon social__icon" width="20" height="20">
+                        <use xlink:href="./images/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__items">
+                    <a
+                      class="social__link"
+                      href="#"
+                      target="_blank"
+                      aria-label="linkedin"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="icon social__icon" width="20" height="20">
+                        <use xlink:href="./images/sprite.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

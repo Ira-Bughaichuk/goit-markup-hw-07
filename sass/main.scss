@@ -1,7 +1,10 @@
+@import 'utils/variables';
 @import 'base/normalize';
-@import 'utils/body';
 @import 'utils/reset';
+
+@import 'utils/body';
 @import 'utils/container';
+
 @import 'components/page-header';
 @import 'components/navigation';
 @import 'components/logo';

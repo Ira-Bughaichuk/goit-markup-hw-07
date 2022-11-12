@@ -1,0 +1,314 @@
+
+@import 'utils/variables';
+@import 'base/normalize';
+@import 'utils/reset';
+
+
+body {
+    background-color: $primary-background-color;
+    color: $secondary-text-color;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.title {
+    color: $title-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.icon {
+    display: block;
+    fill: currentColor;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.image{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    display: block;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 32px;
+    cursor: pointer;
+}
+
+/*header logo*/
+.page-header{
+ border-bottom: 1px solid $header-border-color;
+}
+.page-header__block{
+    display: flex;
+    align-items: center;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    color: $accent-color;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19; /*31/26=1.1923*/
+    text-decoration: none;
+}
+.page-header__logo{
+    margin-right: 92px;
+}
+.page-header__logo--black span{
+    color: $black-color;
+}
+
+/*list*/
+.list{
+    display: flex;
+    @extend .list-none;
+}
+.list__item{
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+.list__link{
+    @extend .link-none;
+    color: $title-color;
+    font-weight: 500;
+    line-height: 1.4;/*16/14=1.142*/
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    display: inline-block;
+    padding: 30px 0; /*щоб задати псевдоелемент*/
+    cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+    &::after{
+        content: '';
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+        
+            width: 0;
+            height: 4px;
+            background-color: $accent-color;
+            border-radius: 2px;
+            transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:hover::after{
+        width: 100%;
+    }    
+}
+.list__link--active{
+    color: $accent-color;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+    
+        width: 100%;
+        height: 4px;
+        background-color: $accent-color;
+         border-radius: 2px;
+    }
+}
+
+/*contact*/
+.contact{
+    @extend .list-none;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+.page-header__contact{
+    margin-left: auto;
+}
+.contact__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.contact__link{
+    @extend .link-none;
+
+    display: flex;
+    align-items: center;
+  
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    color: inherit;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
+    &:hover,
+    &:focus,
+    &:hover .icon, /*dont work*/
+    &:focus .icon{
+        color: $accent-color;
+    }
+}
+.contact__icon{
+    display: inline-block;
+    margin-right: 10px;
+}
+/**/
+
+
+/*hero*/
+.hero{
+    padding: 200px 0;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: $banner-color;
+    background-image: linear-gradient(to right, $color-gradient, $color-gradient),
+            url(../images/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.pretitle {
+    text-align: center;
+    color: $primary-text-color;
+    max-width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.hero__pretitle{
+    margin: 0 auto 30px;
+}
+.hero__button{
+    margin: 0 auto;
+    color: $primary-text-color;
+    background-color: $accent-color;
+}
+/*features*/
+.features{
+    padding: 94px 0;
+}
+.cards{
+    @extend .list-none;
+    display: flex;
+    column-gap: 30px;
+    padding: 5px;
+} 
+.thumba{/* виставити svg*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-color: $secondary-background-color;
+} 
+.card__thumba:not(:last-child){
+    margin-bottom: 30px;
+}
+.label{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $title-color;
+}
+.thumba__label:not(:last-child){
+    margin-bottom: 10px;
+}
+.description{
+    line-height: 1.71;
+    color: #757575;
+}
+
+/*work*/
+.work{
+    padding-bottom: 94px;
+}
+.work__title{
+    margin-bottom: 50px;
+}
+.products{
+    @extend .list-none;
+    display: inline-flex;
+    column-gap: 30px;
+} 
+.products__content{
+    position: relative;
+    max-width: 370px;
+    overflow: hidden; /*скрити все за межами, щоб добре працював ховер*/
+} 
+.content-hidden{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    width: 100%;
+    padding: 27px 10px;
+    
+    color: $primary-text-color;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.1428;
+    text-transform: uppercase;
+    background-color: rgba(47, 48, 58, 0.8);
+    
+    opacity: 1;
+}
+/*teams*/
+.team{
+    padding: 94px 0;
+}
+.team__title{
+    margin-bottom: 50px;
+}
+ 
+
+
+
+
+
+
+
