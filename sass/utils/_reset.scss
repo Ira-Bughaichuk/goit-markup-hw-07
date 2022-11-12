@@ -1,0 +1,22 @@
+ /*клас для зкидання стилля*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+.list-none { 
+    list-style: none;
+}
+.link-none {
+    display: block;
+    text-decoration: none;
+}
+.img-none {
+    display: block;
+}
