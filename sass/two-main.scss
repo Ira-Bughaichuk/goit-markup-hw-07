@@ -80,6 +80,7 @@ body {
 }
 .logo{
     color: $accent-color;
+    display: inline-block;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -184,7 +185,7 @@ body {
         
     &:hover,
     &:focus,
-    &:hover .icon, /*dont work*/
+    &:hover .icon, 
     &:focus .icon{
         color: $accent-color;
     }
@@ -300,11 +301,186 @@ body {
 /*teams*/
 .team{
     padding: 94px 0;
+    background-color: $secondary-background-color;
 }
 .team__title{
     margin-bottom: 50px;
 }
+.row{
+    @extend .list-none;
+    display: flex;
+    column-gap: 30px;
+    justify-content: center;
+}
+.card-set{
+    background-color: $primary-background-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+.meta{
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*.card-set__meta{
+   
+}*/
+.name{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.1875;
+    text-align: center;
+   color: $title-color;
  
+} 
+.meta__name:not(:last-child){
+    margin-bottom: 10px ;
+}
+.speciality{
+    font-size: 16px;
+    line-height: 1.1875;
+    text-align: center;
+    
+}
+.meta__speciality:not(:last-child) {
+    margin-bottom: 16px;
+}
+.social{
+    @extend .list-none;
+    display: flex;
+    width: 206px;
+    height: 44px;
+    column-gap: 10px;
+} 
+.social__row{
+    @extend .list-none;
+}
+.social__items{          
+    color: $client-icon-color;/*колір який наслідує іконка*/
+}
+.social__link{
+    @extend .link-none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    color: inherit;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover,
+    &:focus{
+        background-color: $accent-color;
+        }
+}
+.social__icon {
+
+    .social__link:hover &,
+    .social__link:focus &{
+        fill: $primary-text-color;
+    }
+}
+
+/*clients*/
+.clients{
+    padding: 50px 0;
+}
+.clients__title{
+    margin-bottom: 50px;
+}
+.clients__row{
+    @extend .list-none;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+.gallery__link{
+    display: flex;
+    color: inherit;
+    text-decoration: none;
+    
+    /* стилі вішаємо на силку !!!*/
+    fill: $client-icon-color;
+    width: 170px;
+    height: 92px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $client-icon-color;
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+        }
+}
+.gallery__icon{
+    .gallery__link:hover &,
+    .gallery__link:focus &{
+        fill: $accent-color;
+    }
+}
+
+/*footer*/
+.page-footer{
+    padding: 60px 0;
+    background-color: $footer-color;
+}
+.box{
+    display: flex;
+    list-style: none;
+    align-items: baseline;
+        /*зробити рівно до лого- рівняє по лінії текстового вмісту*/
+}
+/*footer__box__location*/
+.page-footer__logo{
+    margin-bottom: 20px;
+}
+.page-footer__logo--white span{
+    color: $primary-text-color;
+}
+
+.address__row{
+    @extend .list-none;
+}
+.address__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+.address__link{
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.71;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover,
+    &:focus {
+            color: $accent-color;
+        }
+}
+.address__link--white {
+    color: $primary-text-color;
+}
+.address__link--gray{
+    color: $footer-link-color;
+}
+/*footer__box__social*/
+
+.box__social{
+     margin-left: 70px;
+}
+.slogan{
+    font-weight: 700;
+    line-height: 1.1428;
+    text-transform: uppercase;
+    color: $primary-text-color;
+}
+.social__slogan {
+    margin-bottom: 20px;
+}
+/*footer__box__form*/
 
 
 
