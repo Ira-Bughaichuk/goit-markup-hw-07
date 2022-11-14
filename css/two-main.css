@@ -286,7 +286,7 @@ p {
 body {
   background-color: #FFFFFF;
   color: #757575;
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.03em;
@@ -378,7 +378,7 @@ body {
 .logo {
   color: #2196F3;
   display: inline-block;
-  font-family: "Raleway", sans-serif;
+  font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19; /*31/26=1.1923*/

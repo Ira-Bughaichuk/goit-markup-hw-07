@@ -7,7 +7,7 @@
 body {
     background-color: $primary-background-color;
     color: $secondary-text-color;
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-roboto;
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.03em;
@@ -83,7 +83,7 @@ body {
 .logo{
     color: $accent-color;
     display: inline-block;
-    font-family: 'Raleway', sans-serif;
+    font-family: $font-raleway;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19; /*31/26=1.1923*/
@@ -348,6 +348,7 @@ body {
 .team-card__speciality:not(:last-child) {
     margin-bottom: 16px;
 }
+/*social*/
 .social{
     @extend %list-none;
     display: flex;

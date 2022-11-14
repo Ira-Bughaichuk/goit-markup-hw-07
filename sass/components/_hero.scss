@@ -1,0 +1,33 @@
+/*hero*/
+.hero {
+    padding: 200px 0;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: $banner-color;
+    background-image: linear-gradient(to right, $color-gradient, $color-gradient),
+        url(../images/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title {
+    text-align: center;
+    color: $primary-text-color;
+    max-width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.hero__title {
+    margin: 0 auto 30px;
+}
+
+.hero__button {
+    margin: 0 auto;
+    color: $primary-text-color;
+    background-color: $accent-color;
+}

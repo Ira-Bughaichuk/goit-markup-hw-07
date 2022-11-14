@@ -1,0 +1,93 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    width: 100%;
+    height: 100%;
+    background-color: $backdrop-baground-color;
+
+    /*анмація при викиду модалки*/
+    transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop__modal {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    /* анмація при викиду модалки*/
+    /*rotate(0deg) - початковий стан модалки, тобто перед transition*/
+    padding: 40px;
+
+    max-width: 528px;
+    max-height: 581px;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+
+    background-color: var(--primary-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    /*анмація при викиду модалки*/
+    transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) rotate(-180deg);
+    }
+
+}
+
+.is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/*-----------------*/
+.close-modal {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+    background: $primary-background-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+    }
+}
+
+.close-modal__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: $black-color;
+
+    .close-modal:hover &,
+    .close-modal:focus & {
+        fill: $accent-color;
+    }
+
+}
+
+.close-modal__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: $black-color;
+    margin-bottom: 12px;
+}

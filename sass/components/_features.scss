@@ -1,0 +1,38 @@
+.features__cards {
+    @extend %list-none;
+    display: flex;
+    gap: 30px;
+    padding: 5px;
+}
+
+.thumba {
+    /* виставити svg*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-color: $secondary-background-color;
+}
+
+.card__thumba:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.thumba__label {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $title-color;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.description {
+    line-height: 1.71;
+    color: #757575;
+}
