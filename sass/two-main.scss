@@ -7,7 +7,6 @@
 body {
     background-color: $primary-background-color;
     color: $secondary-text-color;
-
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -18,14 +17,17 @@ body {
     padding: 0 15px;
     margin: 0 auto;
 }
-.title {
+.section{
+    padding: 94px 0;
+}
+.section-title {
     color: $title-color;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
-    margin-bottom: 50px;
 }
+
 .icon {
     display: block;
     fill: currentColor;
@@ -97,7 +99,7 @@ body {
 /*list*/
 .list{
     display: flex;
-    @extend .list-none;
+    @extend %list-none;
 }
 .list__item{
     &:not(:last-child) {
@@ -105,7 +107,7 @@ body {
     }
 }
 .list__link{
-    @extend .link-none;
+    @extend %link-none;
     color: $title-color;
     font-weight: 500;
     line-height: 1.4;/*16/14=1.142*/
@@ -157,8 +159,8 @@ body {
 }
 
 /*contact*/
-.contact{
-    @extend .list-none;
+.contacts{
+    @extend %list-none;
     display: flex;
 
     justify-content: center;
@@ -172,7 +174,7 @@ body {
 }
 
 .contact__link{
-    @extend .link-none;
+    @extend %link-none;
 
     display: flex;
     align-items: center;
@@ -209,7 +211,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
-.pretitle {
+.title {
     text-align: center;
     color: $primary-text-color;
     max-width: 696px;
@@ -219,7 +221,7 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
-.hero__pretitle{
+.hero__title{
     margin: 0 auto 30px;
 }
 .hero__button{
@@ -228,15 +230,13 @@ body {
     background-color: $accent-color;
 }
 /*features*/
-.features{
-    padding: 94px 0;
-}
-.cards{
-    @extend .list-none;
+.features__cards{
+    @extend %list-none;
     display: flex;
-    column-gap: 30px;
+    gap: 30px;
     padding: 5px;
-} 
+}
+ 
 .thumba{/* виставити svg*/
     display: flex;
     justify-content: center;
@@ -249,15 +249,17 @@ body {
 .card__thumba:not(:last-child){
     margin-bottom: 30px;
 }
-.label{
+
+.thumba__label{
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: $title-color;
-}
-.thumba__label:not(:last-child){
-    margin-bottom: 10px;
+
+    &:not(:last-child){
+        margin-bottom: 10px;
+    }
 }
 .description{
     line-height: 1.71;
@@ -266,17 +268,17 @@ body {
 
 /*work*/
 .work{
-    padding-bottom: 94px;
+    padding-top: 0;
 }
 .work__title{
     margin-bottom: 50px;
 }
 .products{
-    @extend .list-none;
+    @extend %list-none;
     display: inline-flex;
     column-gap: 30px;
 } 
-.products__content{
+.products__item{
     position: relative;
     max-width: 370px;
     overflow: hidden; /*скрити все за межами, щоб добре працював ховер*/
@@ -298,21 +300,21 @@ body {
     
     opacity: 1;
 }
+
 /*teams*/
 .team{
-    padding: 94px 0;
     background-color: $secondary-background-color;
 }
 .team__title{
     margin-bottom: 50px;
 }
-.row{
-    @extend .list-none;
+.team-list{
+    @extend %list-none;
     display: flex;
     column-gap: 30px;
     justify-content: center;
 }
-.card-set{
+.team-card{
     background-color: $primary-background-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -323,44 +325,42 @@ body {
     flex-direction: column;
     align-items: center;
 }
-/*.card-set__meta{
-   
-}*/
+
 .name{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.1875;
     text-align: center;
-   color: $title-color;
+    color: $title-color;
+    padding: 0 10px;
  
 } 
-.meta__name:not(:last-child){
+.team-card__name:not(:last-child){
     margin-bottom: 10px ;
 }
 .speciality{
     font-size: 16px;
     line-height: 1.1875;
     text-align: center;
+    padding: 0 10px;
     
 }
-.meta__speciality:not(:last-child) {
+.team-card__speciality:not(:last-child) {
     margin-bottom: 16px;
 }
 .social{
-    @extend .list-none;
+    @extend %list-none;
     display: flex;
     width: 206px;
     height: 44px;
     column-gap: 10px;
 } 
-.social__row{
-    @extend .list-none;
-}
+
 .social__items{          
     color: $client-icon-color;/*колір який наслідує іконка*/
 }
 .social__link{
-    @extend .link-none;
+    @extend %link-none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -392,7 +392,7 @@ body {
     margin-bottom: 50px;
 }
 .clients__row{
-    @extend .list-none;
+    @extend %list-none;
     display: flex;
     flex-wrap: wrap;
     column-gap: 30px;
@@ -444,7 +444,7 @@ body {
 }
 
 .address__row{
-    @extend .list-none;
+    @extend %list-none;
 }
 .address__item:not(:last-child) {
     margin-bottom: 9px;
@@ -714,6 +714,235 @@ body {
     }
 }
 
+.group-textarea:not(:last-child) {
+    margin-bottom: 10px;
+}
+.textarea__group-textarea{
+    width: 100%;
+    min-height: 120px;
+    height: 100%;
+    border: 1px solid var(--border-modal-input-color);
+    border-radius: 4px;
+    padding: 12px 16px;
+    outline: none;
+    cursor: pointer;
+    resize: none;
+    
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &::placeholder {
+        font-family: 'Roboto';
+        font-size: 12px;
+        line-height: 1.66;
+        letter-spacing: 0.01em;
+        color: $textarea-placholder-color;
+    } 
+    &:focus,
+    &:hover {
+        border-color: $accent-color;
+    }
+
+}
+/*checkbox*/
+.group-checkbox{
+    width: 100%;
+
+    &:not(:last-child) {
+        margin-bottom: 33px;
+    
+    }
+}
+.label__group-checkbox{
+    /*position center for label*/
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    gap: 7px;
+    align-items: center;
+    
+    font-size: 14px;
+    line-height: 1.71;
+    color: $secondary-text-color;
+    cursor: pointer;
+}
+.input__group-checkbox{
+    -webkit-appearence: none;
+    -moz--appearence: none;
+    appearance: none;
+    position: absolute;
+}
+.icon__group-checkbox{
+    display: inline-flex;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-color;
+    border-radius: 2px;
+    
+    transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .input__group-checkbox:checked + & {
+        /*щоб клік відпрацьовував*/
+        background-color: $accent-color;
+        background-image: url(../images/check.svg);
+        background-size: contain;
+        background-position: center;
+        border-color: $accent-color;
+        background-origin: border-box;
+    }
+}
+.link__group-checkbox{
+    color: $accent-color;
+    text-decoration: underline;
+}
+/*button*/
+.button__modal{
+    display: flex;
+        justify-content: center;
+    
+        align-items: center;
+}
+.submit__modal{
+        /* min-width: 200px;*/
+    padding: 10px 52px;
+    
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $primary-text-color;
+}
+
+/*portfolio*/
+.portfolio{ /*main*/
+    padding-bottom: 100px;
+    background-color: $primary-background-color;
+}
+.btns-list{
+    @extend %list-none;
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    margin-bottom: 50px;
+}
+.btns-list__item{
+    box-shadow: none;
+
+    &:hover,   
+    &:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+            0px 1px 2px rgba(0, 0, 0, 0.08), 
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+
+.btns-list__button{
+    color: $title-color;
+    background-color: $secondary-background-color;
+    padding: 6px 22px;
+    border: none;
+    border-radius: 4px;
+    
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        color: $primary-text-color;
+        background-color: $accent-color;
+        
+    }
+}
+
+.portfolio__list{
+    @extend %list-none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.portfolio-card:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-card__link{
+    @extend %link-none;
+    display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.potfolio-card__box{
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-card__hidden{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    background-color: $portfolio-card-background;
+    
+    color: $primary-text-color;
+    
+    font-size: 18px;
+    line-height: 1.56;
+    
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .portfolio-card__link:focus &,
+    .portfolio-card__link:hover &{
+        transform: translateY(0);
+    }
+}
+
+.portfolio-card__description{
+    padding: 20px 24px;
+    border: 1px solid $port-border-color;
+
+    &:not(:last-child) {
+        margin-bottom: 4px;
+    }
+}
+.portfolio-card__title{
+    color: $title-color;
+    padding: 0 5px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    &:not(:last-child) {
+        margin-bottom: 4px;
+    }
+}
+.portfolio-card__text{
+    color: $secondary-text-color;
+    padding: 0 5px;
+    font-size: 16px;
+    line-height: 1.88;
+    &:not(:last-child) {
+        margin-bottom: 4px;
+    }
+}
 
 
 

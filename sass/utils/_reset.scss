@@ -10,9 +10,13 @@ p {
     margin: 0;
     padding: 0;
 }
-.list-none { 
+
+
+
+
+%list-none { 
     list-style: none;
 }
-.link-none {
+%link-none {
     text-decoration: none;
 }
