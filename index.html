@@ -523,7 +523,7 @@
     <footer class="page-footer">
       <div class="container">
         <div class="box page-footer__box">
-          <div class="location box__location">
+          <div class="box__location">
             <a
               class="logo page-footer__logo page-footer__logo--white"
               lang="en"
@@ -612,9 +612,91 @@
               </li>
             </ul>
           </div>
-          <div class="form box__form"></div>
+          <div class="box__sending">
+            <p class="slogan sending__slogan">Підпишіться на розсилку</p>
+            <form class="form sending__form">
+              <label class="mail form__mail">
+                <input class="input mail__input" type="mail" name="email" placeholder="E-mail" />
+              </label>
+
+              <button class="btn form__btn" type="submit">
+                Підписатися
+                <svg class="icon btn__icon" width="24px" height="24px">
+                  <use xlink:href="./images/sprite.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="backdrop__modal">
+        <button class="close-modal" type="button" data-modal-close>
+          <svg class="icon close-modal__icon" width="18" height="18">
+            <use xlink:href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="close-modal__title">Залиште свої дані, ми вам передзвонимо</p>
+
+        <form action="#" class="form__modal">
+          <div class="group-row" role="group">
+            <label class="label__group-row" for="name">Ім'я</label>
+            <div class="input-modal">
+              <input class="input-modal__inf" name="name" type="text" id="name" placeholder=" " />
+              <svg class="icon input-modal__icon" width="18" height="18">
+                <use href="./images/sprite.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="group-row" role="group">
+            <label class="label__group-row" for="phone">Телефон</label>
+            <div class="input-modal">
+              <input
+                class="input-modal__inf"
+                name="phone"
+                type="number"
+                id="phone"
+                placeholder=" "
+              />
+              <svg class="icon input-modal__icon" width="18" height="18">
+                <use xlink:href="./images/sprite.svg#icon-mobil-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="group-row" role="group">
+            <label class="label__group-row" for="email">Пошта</label>
+            <div class="input-modal">
+              <input class="input-modal__inf" name="text" type="email" id="email" placeholder=" " />
+              <svg class="icon input-modal__icon" width="18" height="18">
+                <use xlink:href="./images/sprite.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="textarea group-row__textarea" role="group">
+            <label class="label__group-row">Коментар</label>
+            <textarea class="__textarea" name="textarea" placeholder="Введіть текст"></textarea>
+          </div>
+
+          <div class="group-row-checkbox" role="group">
+            <label class="form-label-checkbox">
+              <input class="form-input-checkbox" type="checkbox" name="checkbox" />
+              <span class="form-icon-checkbox"></span>
+
+              Погоджуюся з розсилкою та приймаю
+              <a class="modal-link-checkbox">Умови договору</a>
+            </label>
+          </div>
+          <div class="group-row-button">
+            <button class="button-submit" type="submit">Відправити</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

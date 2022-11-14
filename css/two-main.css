@@ -842,4 +842,300 @@ body {
   margin-bottom: 20px;
 }
 
-/*footer__box__form*//*# sourceMappingURL=two-main.css.map */
+/*footer__box__sending*/
+.box__sending {
+  margin-left: auto;
+  max-width: 570px;
+  width: 100%;
+}
+
+.sending__slogan {
+  margin-bottom: 20px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form__mail { /*email*/
+  /*щоб розтягнути на ширину в макеті*/
+  display: block;
+  width: 100%;
+  max-width: 358px;
+}
+
+.form__mail::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form__mail::-moz-placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form__mail:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form__mail::-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form__mail::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mail__input {
+  padding: 15px 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  color: #FFFFFF;
+}
+
+.form__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 10px 28px;
+  min-width: 200px;
+  background-color: #2196F3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+.btn__icon {
+  fill: #FFFFFF;
+}
+
+/*backdrop*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  /*анмація при викиду модалки*/
+  -webkit-transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop__modal {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+  /* анмація при викиду модалки*/
+  /*rotate(0deg) - початковий стан модалки, тобто перед transition*/
+  padding: 40px;
+  max-width: 528px;
+  max-height: 581px;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  background-color: var(--primary-background-color);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  /*анмація при викиду модалки*/
+  -webkit-transition: -webkit-transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden .backdrop__modal {
+  -webkit-transform: translate(-50%, -50%) rotate(-180deg);
+          transform: translate(-50%, -50%) rotate(-180deg);
+}
+
+.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/*-----------------*/
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-modal:hover, .close-modal:focus {
+  border-color: #2196F3;
+}
+
+.close-modal__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #000000;
+}
+.close-modal:hover .close-modal__icon, .close-modal:focus .close-modal__icon {
+  fill: #2196F3;
+}
+
+.close-modal__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+/*form__modal*/
+.form__modal {
+  /* max-width: 448px;*/
+  width: 100%;
+  margin: 0 auto;
+}
+
+.group-row {
+  width: 100%;
+}
+.group-row:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.label__group-row {
+  font-size: 12px;
+  line-height: 1.1667;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+.label__group-row:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.input-modal {
+  position: relative;
+}
+
+.input-modal__inf {
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  min-height: 40px;
+  height: 100%;
+  padding: 12px 15px 12px 42px;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.input-modal__inf:focus, .input-modal__inf:hover {
+  border-color: #2196F3;
+}
+
+.input-modal__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  fill: #212121;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-modal__inf:focus + .input-modal__icon, .input-modal__inf:hover + .input-modal__icon {
+  fill: #2196F3;
+}
+
+.group-row__textarea {
+  width: 100%;
+  min-height: 120px;
+  height: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  outline: none;
+  cursor: pointer;
+  resize: none;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.group-row__textarea ::-webkit-input-placeholder {
+  font-family: "Roboto";
+  font-size: 12px;
+  line-height: 1.66;
+  letter-spacing: 0.01em;
+  color: var(--textarea-placholder-color);
+}
+.group-row__textarea ::-moz-placeholder {
+  font-family: "Roboto";
+  font-size: 12px;
+  line-height: 1.66;
+  letter-spacing: 0.01em;
+  color: var(--textarea-placholder-color);
+}
+.group-row__textarea :-ms-input-placeholder {
+  font-family: "Roboto";
+  font-size: 12px;
+  line-height: 1.66;
+  letter-spacing: 0.01em;
+  color: var(--textarea-placholder-color);
+}
+.group-row__textarea ::-ms-input-placeholder {
+  font-family: "Roboto";
+  font-size: 12px;
+  line-height: 1.66;
+  letter-spacing: 0.01em;
+  color: var(--textarea-placholder-color);
+}
+.group-row__textarea ::placeholder {
+  font-family: "Roboto";
+  font-size: 12px;
+  line-height: 1.66;
+  letter-spacing: 0.01em;
+  color: var(--textarea-placholder-color);
+}
+.group-row__textarea:not(:last-child) {
+  margin-bottom: 10px;
+}/*# sourceMappingURL=two-main.css.map */

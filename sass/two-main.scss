@@ -480,7 +480,243 @@ body {
 .social__slogan {
     margin-bottom: 20px;
 }
-/*footer__box__form*/
+/*footer__box__sending*/
+.box__sending{
+    margin-left: auto;
+    max-width: 570px;
+    width: 100%;
+}
+.sending__slogan {
+    margin-bottom: 20px;
+}
+.form{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+} 
+
+.form__mail{/*email*/
+    /*щоб розтягнути на ширину в макеті*/
+    display: block;
+    width: 100%;
+    max-width: 358px;
+}
+.form__mail::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: $footer-link-color;
+}
+.mail__input{
+    padding: 15px 16px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+     border-radius: 4px;
+    outline: none;
+    width: 100%;
+    color: $primary-text-color;
+}
+.form__btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 28px;
+    min-width: 200px;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    color: $primary-text-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+} 
+.btn__icon {
+    fill: $primary-text-color;
+}
+/*backdrop*/
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    
+    width: 100%;
+    height: 100%;
+    background-color: $backdrop-baground-color;
+
+    /*анмація при викиду модалки*/
+    transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop__modal {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    /* анмація при викиду модалки*/
+    /*rotate(0deg) - початковий стан модалки, тобто перед transition*/
+    padding: 40px;
+
+    max-width: 528px;
+    max-height: 581px;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+
+    background-color: var(--primary-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    /*анмація при викиду модалки*/
+    transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) rotate(-180deg);
+    }
+
+}
+.is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/*-----------------*/
+.close-modal {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+    background: $primary-background-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+    }
+}
+
+.close-modal__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: $black-color;
+
+    .close-modal:hover &,
+    .close-modal:focus & {
+        fill: $accent-color;
+    }
+    
+}
+.close-modal__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: $black-color;
+    margin-bottom: 12px;
+}
+
+/*form__modal*/
+.form__modal {
+    /* max-width: 448px;*/
+    width: 100%;
+    margin: 0 auto;
+}
+.group-row{
+    width: 100%;
+        
+    &:not(:last-child) {
+         margin-bottom: 10px;
+    }
+}
+
+.label__group-row {
+    font-size: 12px;
+    line-height: 1.1667;
+    letter-spacing: 0.01em;
+    color: $secondary-text-color;
+
+    &:not(:last-child) {
+        margin-bottom: 4px;
+    }
+}
+.input-modal {
+    position: relative;
+}
+.input-modal__inf{
+    width: 100%;
+    border: 1px solid $border-modal-input-color;
+    border-radius: 4px;
+    
+    outline: none;
+    min-height: 40px;
+    height: 100%;
+    padding: 12px 15px 12px 42px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        border-color: $accent-color;
+    }
+}
+.input-modal__icon{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    
+    transform: translateY(-50%);
+    fill: $title-color;
+    
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .input-modal__inf:focus + &,
+    .input-modal__inf:hover + & {
+        fill: $accent-color;
+    }
+}
+.group-row__textarea{
+    width: 100%;
+    min-height: 120px;
+    height: 100%;
+    border: 1px solid $border-modal-input-color;
+    border-radius: 4px;
+    padding: 12px 16px;
+    outline: none;
+    cursor: pointer;
+    resize: none;
+    
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    ::placeholder {
+            font-family: 'Roboto';
+            font-size: 12px;
+            line-height: 1.66;
+            letter-spacing: 0.01em;
+            color: var(--textarea-placholder-color);
+    }
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
 
 
 
