@@ -12,9 +12,11 @@
     &__logo {/*footer__box__location*/
         margin-bottom: 20px;
     }
-    &__logo--white span {
-        color: $primary-text-color;
+    &__link{
+        background-color: $footer-icon-baground-color;
+        color:$primary-text-color;
     }
+    
     
 }
 
@@ -52,6 +54,7 @@
 .box__social{/*social*/
     margin-left: 70px;
 }
+
 .slogan{
     font-weight: 700;
     line-height: 1.1428;
@@ -60,9 +63,13 @@
 
     &__social:not(:last-child){
             margin-bottom: 20px;
-        }
+    }
     
 }
+/*.social__link{
+    color: $primary-text-color ;
+}*/
+
 
 
 
@@ -75,9 +82,14 @@
 
 .slogan__sending {
     &:not(:last-child) {
-            margin-bottom: 20px;
-        }
+        margin-bottom: 20px;
+    }
 }
+
+/* &--footer {
+     background-color: rgba(255, 255, 255, 0.1);
+     ;
+ }*/
 
 .form {
     display: flex;
@@ -97,8 +109,9 @@
             font-size: 16px;
             line-height: 1.25;
             color: $footer-link-color;
-            }
+        }
     }
+
     &__input {
         padding: 15px 16px;
         background-color: transparent;
@@ -112,7 +125,7 @@
 
     &__button {
         display: flex;
-            align-items: center;
+          
         gap: 10px;
         padding: 10px 28px;
         min-width: 200px;
@@ -123,7 +136,7 @@
             fill: $primary-text-color;
         }
     }
-
-
 }
+
+
 

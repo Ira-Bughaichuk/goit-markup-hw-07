@@ -15,8 +15,8 @@
     <header class="page-header">
       <div class="container">
         <div class="page-header__block">
-          <a href="./index.html" class="logo page-header__logo page-header__logo--black" lang="en">
-            Web<span>Studio</span>
+          <a href="./index.html" class="logo page-header__logo" lang="en">
+            Web<span class="logo__part">Studio</span>
           </a>
           <nav class="navigation page-header__navigation">
             <ul class="navigation__list">
@@ -99,7 +99,7 @@
                 </div>
               </a>
             </li>
-            <li class="card portfolio-card">
+            <li class="portfolio-card__item">
               <a class="portfolio-card__link" href="#" target="_blank" rel="noreferrer noopener">
                 <div class="potfolio-card__box pf-box">
                   <img
@@ -122,7 +122,7 @@
                 </div>
               </a>
             </li>
-            <li class="card portfolio-card">
+            <li class="portfolio-card__item">
               <a class="portfolio-card__link" href="#" target="_blank" rel="noreferrer noopener">
                 <div class="potfolio-card__box">
                   <img
@@ -145,7 +145,7 @@
                 </div>
               </a>
             </li>
-            <li class="card portfolio-card">
+            <li class="portfolio-card__item">
               <a class="portfolio-card__link" href="#" target="_blank" rel="noreferrer noopener">
                 <div class="potfolio-card__box">
                   <img
@@ -168,7 +168,7 @@
                 </div>
               </a>
             </li>
-            <li class="card portfolio-card">
+            <li class="portfolio-card__item">
               <a class="portfolio-card__link" href="#" target="_blank" rel="noreferrer noopener">
                 <div class="potfolio-card__box">
                   <img
@@ -191,7 +191,7 @@
                 </div>
               </a>
             </li>
-            <li class="card portfolio-card">
+            <li class="portfolio-card__item">
               <a class="portfolio-card__link" href="#" target="_blank" rel="noreferrer noopener">
                 <div class="potfolio-card__box">
                   <img
@@ -214,7 +214,7 @@
                 </div>
               </a>
             </li>
-            <li class="card portfolio-card">
+            <li class="portfolio-card__item">
               <a class="portfolio-card__link" href="#" target="_blank" rel="noreferrer noopener">
                 <div class="potfolio-card__box">
                   <img
@@ -237,7 +237,7 @@
                 </div>
               </a>
             </li>
-            <li class="card portfolio-card">
+            <li class="portfolio-card__item">
               <a class="portfolio-card__link" href="#" target="_blank" rel="noreferrer noopener">
                 <div class="potfolio-card__box">
                   <img
@@ -260,7 +260,7 @@
                 </div>
               </a>
             </li>
-            <li class="card portfolio-card">
+            <li class="portfolio-card__item">
               <a class="portfolio-card__link" href="#" target="_blank" rel="noreferrer noopener">
                 <div class="potfolio-card__box">
                   <img
@@ -291,15 +291,11 @@
       <div class="container">
         <div class="box page-footer__box">
           <div class="box__location">
-            <a
-              class="logo page-footer__logo page-footer__logo--white"
-              lang="en"
-              href="./index.html"
-            >
-              Web<span>Studio</span>
+            <a class="logo page-footer__logo" lang="en" href="./index.html">
+              Web<span class="logo__part--white">Studio</span>
             </a>
-            <address class="address">
-              <ul class="address__row">
+            <address>
+              <ul class="address">
                 <li class="address__item">
                   <a
                     class="address__link address__link--white"
@@ -323,11 +319,11 @@
             </address>
           </div>
           <div class="box__social">
-            <p class="slogan social__slogan">приєднуйтесь</p>
+            <p class="slogan slogan__social">приєднуйтесь</p>
             <ul class="social social__row">
               <li class="social__items">
                 <a
-                  class="social__link"
+                  class="social__link page-footer__link"
                   href="#"
                   target="_blank"
                   aria-label="instagram"
@@ -340,7 +336,7 @@
               </li>
               <li class="social__items">
                 <a
-                  class="social__link"
+                  class="social__link page-footer__link"
                   href="#"
                   target="_blank"
                   aria-label="twitter"
@@ -353,7 +349,7 @@
               </li>
               <li class="social__items">
                 <a
-                  class="social__link"
+                  class="social__link page-footer__link"
                   href="#"
                   target="_blank"
                   aria-label="facebook"
@@ -366,7 +362,7 @@
               </li>
               <li class="social__items">
                 <a
-                  class="social__link"
+                  class="social__link page-footer__link"
                   href="#"
                   target="_blank"
                   aria-label="linkedin"
@@ -380,15 +376,15 @@
             </ul>
           </div>
           <div class="box__sending">
-            <p class="slogan sending__slogan">Підпишіться на розсилку</p>
-            <form class="form sending__form">
-              <label class="mail form__mail">
-                <input class="input mail__input" type="email" name="email" placeholder="E-mail" />
+            <p class="slogan slogan__sending">Підпишіться на розсилку</p>
+            <form class="form">
+              <label class="form__mail">
+                <input class="form__input" type="email" name="email" placeholder="E-mail" />
               </label>
 
-              <button class="btn form__btn" type="submit">
+              <button class="button form__button" type="submit">
                 Підписатися
-                <svg class="icon btn__icon" width="24px" height="24px">
+                <svg class="icon button__icon" width="24px" height="24px">
                   <use xlink:href="./images/sprite.svg#icon-send"></use>
                 </svg>
               </button>

@@ -142,19 +142,12 @@
 }
 
 /*button*/
-.button__modal {
-   display: flex;
-    justify-content: center;
-    align-items: center;
+.button-modal {
     min-width: 200px;
-
-
-    /*display: block;
-    text-align: center;
-    min-width: 200px;*/
 
     &__submit {
         display: block;
+        margin: 0 auto;
         padding: 10px 52px;
     }
 }

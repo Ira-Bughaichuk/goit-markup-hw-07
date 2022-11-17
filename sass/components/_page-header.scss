@@ -2,16 +2,16 @@
 /*header logo*/
 .page-header {
     border-bottom: 1px solid $header-border-color;
+    
     &__block {
-            display: flex;
-            align-items: center;
-        }
+        display: flex;
+        align-items: center;
+    }
+
     &__logo {
-        margin-right: 92px;
+        margin-right: 92px;   
     }
-    &__logo--black span {
-        color: $black-color;
-    }
+
     &__contact {
         margin-left: auto;
     }
