@@ -27,7 +27,7 @@
         position: relative;
         overflow: hidden;
     }
-/*
+
     &__hidden {
         position: absolute;
         top: 0;
@@ -50,7 +50,7 @@
         .portfolio-card__link:hover & {
             transform: translateY(0);
         }
-    }*/
+    }
 
     &__description {
         padding: 20px 24px;

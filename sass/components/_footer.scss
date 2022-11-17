@@ -73,8 +73,10 @@
     width: 100%;
 }
 
-.sending__slogan {
-    margin-bottom: 20px;
+.slogan__sending {
+    &:not(:last-child) {
+            margin-bottom: 20px;
+        }
 }
 
 .form {

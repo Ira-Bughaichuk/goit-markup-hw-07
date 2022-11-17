@@ -143,13 +143,18 @@
 
 /*button*/
 .button__modal {
-    display: flex;
+   display: flex;
     justify-content: center;
     align-items: center;
     min-width: 200px;
 
+
+    /*display: block;
+    text-align: center;
+    min-width: 200px;*/
+
     &__submit {
-        
+        display: block;
         padding: 10px 52px;
     }
 }
