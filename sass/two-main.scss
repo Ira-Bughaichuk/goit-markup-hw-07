@@ -99,8 +99,10 @@ body {
 /*list*/
 .list{
     display: flex;
+    
     @extend %list-none;
 }
+
 .list__item{
     &:not(:last-child) {
         margin-right: 50px;

@@ -15,23 +15,25 @@
     <header class="page-header">
       <div class="container">
         <div class="page-header__block">
-          <a class="logo page-header__logo page-header__logo--black" lang="en" href="./index.html">
+          <a href="./index.html" class="logo page-header__logo page-header__logo--black" lang="en">
             Web<span>Studio</span>
           </a>
           <nav class="navigation page-header__navigation">
-            <ul class="list page-header__list">
-              <li class="list__item">
-                <a href="" class="list__link list__link--active">Студія</a>
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="./index.html" class="navigation__link">Студія</a>
               </li>
-              <li class="list__item">
-                <a href="" class="list__link">Портфоліо</a>
+              <li class="navigation__item">
+                <a href="./portfolio.html" class="navigation__link navigation__link--active"
+                  >Портфоліо</a
+                >
               </li>
-              <li class="list__item">
-                <a href="" class="list__link">Контакти</a>
+              <li class="navigation__item">
+                <a href="" class="navigation__link">Контакти</a>
               </li>
             </ul>
           </nav>
-          <ul class="contacts page-header__contact">
+          <ul class="contact page-header__contact">
             <li class="contact__item">
               <a class="contact__link" href="mailto:info@devstudio.com">
                 <svg class="icon contact__icon" width="16" height="12">
@@ -73,8 +75,8 @@
               <button class="btns-list__button" type="submit">Маркетинг</button>
             </li>
           </ul>
-          <ul class="portfolio__list">
-            <li class="card portfolio-card">
+          <ul class="portfolio-card">
+            <li class="portfolio-card__item">
               <a class="portfolio-card__link" href="#" target="_blank" rel="noreferrer noopener">
                 <div class="potfolio-card__box">
                   <img
@@ -99,7 +101,7 @@
             </li>
             <li class="card portfolio-card">
               <a class="portfolio-card__link" href="#" target="_blank" rel="noreferrer noopener">
-                <div class="potfolio-card__box">
+                <div class="potfolio-card__box pf-box">
                   <img
                     class="portfolio-card__image image"
                     src="./images/portfolio_2.jpg"
@@ -107,7 +109,7 @@
                     height="294"
                     alt="На ноутбуці відкрита головна сторінка"
                   />
-                  <p class="portfolio-card__hidden">
+                  <p class="portfolio-card__hidden box__hidden">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                     приватну особу.
@@ -381,7 +383,7 @@
             <p class="slogan sending__slogan">Підпишіться на розсилку</p>
             <form class="form sending__form">
               <label class="mail form__mail">
-                <input class="input mail__input" type="mail" name="email" placeholder="E-mail" />
+                <input class="input mail__input" type="email" name="email" placeholder="E-mail" />
               </label>
 
               <button class="btn form__btn" type="submit">

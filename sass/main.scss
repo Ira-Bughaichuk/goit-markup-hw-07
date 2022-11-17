@@ -1,27 +1,32 @@
 
-@import 'base/normalize';
-@import 'utils/variables';
-@import 'utils/reset';
+@import './base/normalize';
+@import './utils/variables';
+@import './utils/reset';
+@import './utils/visually-hidden';
 
-@import 'utils/base';
-@import 'utils/body';
-@import 'utils/container';
-@import 'utils/placeholder';
+@import './utils/base';
+@import './utils/body';
+@import './utils/container';
+@import './utils/placeholder';
 
 
 
-@import 'components/page-header';
-@import 'components/logo';
-@import 'components/hero';
-@import 'components/features';
-@import 'components/work';
-@import 'components/teams';
-@import 'components/social-icon';
-@import 'components/clients';
-@import 'components/footer';
-@import 'components/portfolio';
-@import 'components/portfolio-btn';
+@import './components/page-header';
+@import './components/logo';
+@import './components/navigation';
+@import './components/contacts';
 
-@import 'components/backdrop-modal';
-@import 'components/form-modal';
+@import './components/hero';
+@import './components/features';
+@import './components/work';
+@import './components/teams';
+@import './components/social-icon';
+@import './components/clients';
+@import './components/footer';
+@import './components/portfolio';
+@import './components/portfolio-btn';
+
+@import './components/backdrop-modal';
+@import './components/close-modal';
+@import './components/form-modal';
 

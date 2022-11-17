@@ -4,35 +4,35 @@
     width: 206px;
     height: 44px;
     column-gap: 10px;
-}
 
-.social__items {
-    color: $client-icon-color;
-    /*колір який наслідує іконка*/
-}
+    &__items {
+            color: $client-icon-color;
+            /*колір який наслідує іконка*/
+        }
 
-.social__link {
-    @extend %link-none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    color: inherit;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-        background-color: $accent-color;
+    &__link {
+        @extend %link-none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        color: inherit;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover,
+        &:focus {
+            background-color: $accent-color;
+        }
     }
-}
 
-.social__icon {
-
-    .social__link:hover &,
-    .social__link:focus & {
-        fill: $primary-text-color;
+    &__icon {
+    
+        .social__link:hover &,
+        .social__link:focus & {
+            fill: $primary-text-color;
+        }
     }
 }
