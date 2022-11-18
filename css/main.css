@@ -743,7 +743,7 @@ body {
 .clients-list__link:hover, .clients-list__link:focus {
   border-color: #2196F3;
 }
-.clients__link:hover .clients-list__icon, .clients__link:focus .clients-list__icon {
+.clients-list__link:hover .clients-list__icon, .clients-list__link:focus .clients-list__icon {
   fill: #2196F3;
 }
 

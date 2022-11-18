@@ -36,8 +36,8 @@
 
     &__icon {
         
-        .clients__link:hover &,
-        .clients__link:focus & {
+        .clients-list__link:hover &,
+        .clients-list__link:focus & {
             fill: $accent-color;
         }
     }
